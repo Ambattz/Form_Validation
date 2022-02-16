@@ -38,9 +38,11 @@ const BasicForm = (props) => {
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    if (!fnameIsValid && !lnameIsValid && !emailIsValid) {
+    if (!formIsValid) {
       return;
     }
+    console.log("Submitted Form");
+    console.log(fnameInput, lnameInput, emailInput);
     fnameReset();
     lnameReset();
     emailReset();
